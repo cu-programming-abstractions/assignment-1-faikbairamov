@@ -3,17 +3,19 @@
  * for you to write down answers to the three questions asked in this section.
  *
  * Q1:
- *
- *
- *
+ * Once upon a time, mathematician Srinivasa Ramanujan
+ * was unraveling the mysteries of the universe when,
+ * without warning, Faik Bairamov saved the Leshan Giant
+ * Buddha from overzealous ice cream enthusiasts through
+ * sheer force of personality.
  *
  * Q2:
- *
- *
- *
+ * When I clicked the 'Go' button in the program window, it crashed the
+ * application. It poped up a message which said: 'Welcome to CPP file quit
+ * unexpectedly' and it quit the window.
  *
  * Q3:
- *
+ * 598 302 434 229 68 122 483 598
  *
  *
  *
@@ -28,7 +30,7 @@ using namespace std;
 /* TODO: Fill this in with your name before reading the story. Otherwise
  * you'll get the wrong story!
  */
-const string MyName = "(Your Name Here)";
+const string MyName = "Faik Bairamov";
 
 namespace {
     void theEnd() {

@@ -1,12 +1,29 @@
 #include "Fire.h"
+#include <utility>
 using namespace std;
 
 void updateFire(Grid<int>& fire) {
-    /* TODO: The next line just exists to make sure you don't get compiler warning messages
-     * when this function isn't implemented. Delete this comment and the next line, then
-     * implement this function.
-     */
-    (void) fire;
+    for (int i = 1; i < fire.numRows(); i++) {
+        for (int j = 0; j < fire.numCols(); j++) {
+            // Determining which cells are above
+            Vector<pair<int, int>> neighboringCells;
+            if (fire.inBounds(i-1, j-1)) {
+                neighboringCells.add({i-1, j-1});
+            }
+            if (fire.inBounds(i-1, j)) {
+                neighboringCells.add({i-1, j});
+            }
+            if (fire.inBounds(i-1, j+1)) {
+                neighboringCells.add({i-1, j+1});
+            }
+
+            pair<int, int> chosenCell = randomElement(neighboringCells);
+            fire[chosenCell.first][chosenCell.second] = fire[i][j];
+            if (randomChance(2.0/3.0) && fire[chosenCell.first][chosenCell.second] != 0) {
+                fire[chosenCell.first][chosenCell.second]--;
+            }
+        }
+    }
 }
 
 
